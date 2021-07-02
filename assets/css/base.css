@@ -37,6 +37,26 @@ html{
 .grid__row{
     display: flex;
     flex-wrap: wrap;
+    margin-left: -5px;
+    margin-right: -5px;
+}
+
+.grid__column-2{
+    padding-left: 5px;
+    padding-right: 5px;
+    width: 16.667%;
+}
+
+.grid__column-2-4{
+    padding-left: 5px;
+    padding-right: 5px;
+    width: 20%;
+}
+
+.grid__column-10{
+    padding-left: 5px;
+    padding-right: 5px;
+    width: 83.333%;
 }
 
 
@@ -87,7 +107,8 @@ html{
 
 /* Button style */
 .btn{
-    min-width: 142px;
+    background-color: white;
+    min-width: 124px;
     min-height: 36px;
     text-decoration: none;
     border: none;
@@ -97,6 +118,10 @@ html{
     cursor: pointer;
     color: var(--text-color);
     line-height: 1.6rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
 }
 .btn.btn--normal:hover{
     background-color: rgba(0, 0, 0, 0.1);
@@ -143,4 +168,168 @@ html{
     height: 22px;
     margin: -4px 16px 0;
     border-left: 1px solid var(--border--color);
+}
+
+/* Selection */
+.select-input{
+    position: relative;
+    min-width: 200px;
+    height: 34px;
+    padding: 0 12px;  
+    border-radius: 2px;
+    background-color: var(--white-color); 
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.select-input:hover .select-input__list {
+    display: block;
+    z-index: 1;
+}
+
+.select-input__label{
+    font-size:1.4rem;
+}
+
+.select-input__icon{
+    font-size:1.4rem;
+    color: rgb(131,131,131);
+    position: relative;
+    top: 1px;
+}
+
+
+.select-input__list{
+    position: absolute;
+    top: calc(100% - 8px);
+    right: 0;
+    left: 0%;
+    background-color: var(--white-color);
+    border-radius: 2px;
+    padding: 8px 14px;
+    display: none;
+}
+
+.select-input__list::before{
+    right: 0;
+    top: -4px;
+    position: absolute;
+    content: "";
+    background-color: transparent;
+    width:190px;
+    height: 5px;
+}
+
+.select-input__item{
+    padding: 8px 0px;
+    list-style: none;``````````````
+}
+.select-input__link{
+    text-decoration: none;
+    font-size: 1.4rem;
+}
+
+
+.select-input__item:hover .select-input__link{
+    color: var(--primary--color);
+}
+
+/* Pagination */
+.pagination{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+}
+
+.pagination-item{
+    margin: 0 8px;
+}
+
+.pagination-item__link{
+    display: block;
+    text-decoration: none;
+    font-size: 1.5rem;
+    color: gray;
+    min-width: 40px;
+    height: 30px;
+    text-align: center;
+    line-height: 30px;
+    border-radius: 2px;
+}
+
+.pagination-item__link--actived{
+    background-color: var(--primary--color);
+    color: var(--white-color);
+}
+
+.pagination-item__link:hover.pagination-item__link--actived{
+    background-color: #dfc2c9;
+}
+
+.pagination-item__icon{
+
+}
+/* footer */
+
+.footer{
+    border-top: 4px solid var(--primary--color);
+    padding-top: 16px;
+}
+
+.footer__heading{
+    font-size: 1.4rem;
+    text-transform: uppercase;
+    color: black;
+}
+
+.footer-list{
+    padding-left: 0;
+    list-style: none;
+}
+
+.footer-item__link{
+    text-decoration: none;
+    font-size: 1.2rem;
+    padding: 2px 0;
+    display: flex;
+    align-items: center;
+
+}
+
+.footer-item__link:hover{
+    color: var(--primary--color);       
+
+}
+
+.footer-item__icon {
+    font-size: 1.6rem;
+    margin-top: -1px;
+    margin-right: 8px;
+    
+}
+
+
+.footer__download{
+    display:flex;
+}
+.footer__download-qr{
+    border: 1px solid var(--border--color);
+    width: 80px;
+    height: 80px;
+}
+
+.footer__download-apps{
+    margin-left: 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.footer__download-app-img{
+    height: 16px;
+}
+
+.footer__download-apps-link{
+    text-decoration: none;
 }
