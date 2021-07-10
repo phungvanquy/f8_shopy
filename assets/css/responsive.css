@@ -8,6 +8,10 @@
         display: none;
     }
 
+    .show-on-mobile-tablet{
+        display: block;
+    }
+
     .header__cart-list{
         position: fixed;
         width: 100%;
@@ -132,4 +136,12 @@
     .header__sort-bar{
         display: flex;
     }
+
+    .header__mobile-search{
+        display: block;
+    }
+    .footer{
+        padding: 0 16px;
+    }
+
 }
